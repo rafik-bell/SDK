@@ -6,7 +6,7 @@ spring:
     name: service-product
 
 keycloak:
-  server-url: http://localhost:8081
-  realm: master
-  username: admin
-  password: admin123
+  server-url: ${KEYCLOAK_SERVER_URL:http://localhost:8081}
+  realm: ${KEYCLOAK_REALM:master}
+  username: ${KEYCLOAK_USERNAME:admin}
+  password: ${KEYCLOAK_PASSWORD:admin123}

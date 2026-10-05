@@ -1,0 +1,30 @@
+x-keycloak-env: &keycloak-env
+  KEYCLOAK_SERVER_URL: ${KEYCLOAK_SERVER_URL:-http://host.docker.internal:8081}
+  KEYCLOAK_REALM: ${KEYCLOAK_REALM:-master}
+  KEYCLOAK_USERNAME: ${KEYCLOAK_USERNAME:-admin}
+  KEYCLOAK_PASSWORD: ${KEYCLOAK_PASSWORD:-admin123}
+
+services:
+  service-operator:
+    build:
+      context: .
+      dockerfile: service-operator/Dockerfile
+    container_name: service-operator
+    ports:
+      - "8082:8082"
+    environment: *keycloak-env
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+
+  service-product:
+    build:
+      context: .
+      dockerfile: service-product/Dockerfile
+    container_name: service-product
+    ports:
+      - "8083:8082"
+    environment: *keycloak-env
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
