@@ -1,0 +1,12 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: service-operator
+
+keycloak:
+  server-url: ${KEYCLOAK_SERVER_URL:http://localhost:8081}
+  realm: ${KEYCLOAK_REALM:master}
+  username: ${KEYCLOAK_USERNAME:admin}
+  password: ${KEYCLOAK_PASSWORD:admin123}

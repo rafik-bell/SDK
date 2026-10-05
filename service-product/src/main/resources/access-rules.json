@@ -1,0 +1,15 @@
+{
+  "serviceName": "service-product",
+  "roles": [
+    
+    "product_admin",
+    "product_manager",
+    
+    "product_azizi_developer",
+    "product_azizi_manager",
+    "product_azizi_admin",
+    "product_azizi_user",
+    "product_azizi_devOps",
+    "product_azizi_devOps_manager"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "serviceName": "service-operator",
+  "roles": [
+     "operator_admin",
+      "operator_user"
+
+  ]
+}
