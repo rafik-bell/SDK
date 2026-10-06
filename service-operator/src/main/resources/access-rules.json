@@ -1,8 +1,17 @@
 {
   "serviceName": "service-operator",
+  "version": "1.0.0",
+  "description": "Règles d'accès et rôles pour le microservice Opérateur",
   "roles": [
-     "operator_admin",
-      "operator_user"
-
+    {
+      "name": "operator_admin",
+      "description": "Accès complet à l'administration des opérateurs",
+      "composite": false
+    },
+    {
+      "name": "operator_user",
+      "description": "Accès limité aux fonctionnalités de l'opérateur",
+      "composite": false
+    }
   ]
 }

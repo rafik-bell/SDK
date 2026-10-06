@@ -1,8 +1,12 @@
 {
   "serviceName": "service-product",
+  "version": "1.0.0",
+  "description": "Règles d'accès et rôles pour le microservice Produit",
   "roles": [
-    
-    
-    "product_azizi_devOps_manager"
+    {
+      "name": "PRODUCT_DEVOPS_MANAGER",
+      "description": "Accès complet aux opérations de déploiement et de gestion DevOps des produits",
+      "composite": false
+    }
   ]
 }
